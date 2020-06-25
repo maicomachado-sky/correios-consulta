@@ -128,7 +128,7 @@ class CorreiosConsulta
                     'valor_declarado' => self::cleanMoney($rate->ValorValorDeclarado),
                     'entrega_domiciliar' => $rate->EntregaDomiciliar === 'S',
                     'entrega_sabado' => $rate->EntregaSabado === 'S',
-                    'erro' => array('codigo' => $rate->Erro, 'mensagem' => $rate->MsgErro),
+                    'erro' =>  array('codigo' => (real) $rate->Erro, 'mensagem' => (string) $rate->MsgErro),
                 );
             }
 
